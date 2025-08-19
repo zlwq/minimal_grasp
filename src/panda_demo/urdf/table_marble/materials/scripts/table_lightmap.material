@@ -1,0 +1,21 @@
+material Table/Marble_Lightmap
+{
+  technique
+  {
+    pass
+    {      
+      ambient 1.0 1.0 1.0 1
+      diffuse 1.0 1.0 1.0 1
+      
+      texture_unit
+      {
+        texture marble.png
+      }            
+      texture_unit
+      {
+        texture table_lightmap.png      
+        colour_op add
+      }
+    }
+  }
+}
