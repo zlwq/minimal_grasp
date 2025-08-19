@@ -18,7 +18,7 @@ sudo apt install ros-melodic-<package-name>
 ```
 逐步补齐所有依赖后即可完成构建。
 
-2. 配置环境变量
+### 2. 配置环境变量
 在 ~/.bashrc 中添加以下行，使 Gazebo 能找到自定义模型：
 
 ```bash
@@ -29,13 +29,13 @@ export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/zlwq/minimal_grasp/src/panda_d
 ```bash
 source ~/.bashrc
 ```
-3. 加载工作空间环境
+### 3. 加载工作空间环境
 构建完成后，在 ~/.bashrc 或手动执行：
 
 ```bash
 source /home/zlwq/franka_ros/devel/setup.bash
 ```
-4、打开launch文件和对应的banana_grasp
+### 4、打开launch文件和对应的banana_grasp
 完成以上步骤后，即可在 Gazebo 中启动最小化 Panda 抓取环境，并基于此进行抓取复现。
 ```bash
 roslaunch panda_moveit_config demo_gazebo.launch  
@@ -44,12 +44,12 @@ roslaunch panda_moveit_config demo_gazebo.launch
 ```bash
 rosrun banana_grasp_pkg banana_grasp
 ```
-注意事项
+### 注意事项
 本配置为最小化抓取环境，因此许多非必要功能和插件已被精简，建议使用ubuntu18.04版本进行构建复现。遇到任何问题可在issue板块发布。
 
 另外，franka_ros的franka_gazebo的.h头文件已经删去，因为ubuntu18.04可以下载到ros内置的franka插件，apt-install后系统自动会将对应的头文件安装在opt/ros/melodic/include里面。
 
 如需额外功能，请在编译过程中根据报错提示自行安装缺失的 ROS 依赖包。
 
-致谢
+### 致谢
 本环境基于 franka_ros和官方教程moviet_tutorial 改造而来，感谢原作者的开源贡献。
