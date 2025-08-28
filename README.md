@@ -33,7 +33,7 @@ source ~/.bashrc
 构建完成后，在 ~/.bashrc 或手动执行：
 
 ```bash
-source /home/zlwq/franka_ros/devel/setup.bash
+source /home/zlwq/minimal_grasp/devel/setup.bash
 ```
 ### 4、打开launch文件和对应的banana_grasp
 完成以上步骤后，即可在 Gazebo 中启动最小化 Panda 抓取环境，并基于此进行抓取复现。
